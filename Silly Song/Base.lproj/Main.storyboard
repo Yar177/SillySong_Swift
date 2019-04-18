@@ -18,32 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Silly Song!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7U-aW-7Wc">
-                                <rect key="frame" x="66" y="91" width="283" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7U-aW-7Wc">
+                                <rect key="frame" x="65.5" y="91" width="283" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="0ey-QX-9an"/>
+                                    <constraint firstAttribute="width" constant="283" id="9t2-Qg-cJE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="60"/>
                                 <color key="textColor" red="0.4127477482405143" green="0.38866727224316711" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-2Z-6a4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-2Z-6a4">
                                 <rect key="frame" x="87" y="376" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75593560289999995" green="1" blue="0.97430882080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Efa-4n-vU2"/>
+                                    <constraint firstAttribute="width" constant="240" id="Ruh-Iq-b1Z"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YOUR NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAq-4c-Xb3">
-                                <rect key="frame" x="97" y="268" width="220" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YOUR NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAq-4c-Xb3">
+                                <rect key="frame" x="97" y="268" width="220" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75593560290134065" green="1" blue="0.97430882075299541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xAq-4c-Xb3" secondAttribute="trailing" constant="97" id="1Mn-zi-Ve1"/>
+                            <constraint firstItem="m7U-aW-7Wc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="9BD-bs-yej"/>
+                            <constraint firstItem="m7U-aW-7Wc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HVy-d8-3g4"/>
+                            <constraint firstItem="q9a-2Z-6a4" firstAttribute="top" secondItem="xAq-4c-Xb3" secondAttribute="bottom" constant="91" id="U6v-Xs-m3I"/>
+                            <constraint firstItem="xAq-4c-Xb3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="Ztc-es-Sxt"/>
+                            <constraint firstItem="xAq-4c-Xb3" firstAttribute="top" secondItem="m7U-aW-7Wc" secondAttribute="bottom" constant="62" id="gy4-kF-lq6"/>
+                            <constraint firstItem="xAq-4c-Xb3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h2u-dx-kA3"/>
+                            <constraint firstItem="q9a-2Z-6a4" firstAttribute="centerX" secondItem="xAq-4c-Xb3" secondAttribute="centerX" id="t9w-Yg-44S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="q9a-2Z-6a4" id="NDy-NM-pPf"/>
+                        <outlet property="nameField" destination="xAq-4c-Xb3" id="Mg9-Vi-zxS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
