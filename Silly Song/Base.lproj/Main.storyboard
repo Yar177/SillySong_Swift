@@ -46,6 +46,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="displayLyricsWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lwk-M5-GIi"/>
+                                    <action selector="displayLyricsWithSender:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="uo7-co-4uU"/>
                                     <action selector="resetWithSender:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="yg6-DT-3Jw"/>
                                 </connections>
                             </textField>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var lyricsView: UITextView!
     
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
        
         super.viewDidLoad()
+        self.nameField.delegate = self
         
         
         // Do any additional setup after loading the view.
@@ -59,6 +60,16 @@ class ViewController: UIViewController {
             .replacingOccurrences(of: "<SHORT_NAME>", with: shortName)
         
         return lyrics
+    }
+    
+    
+    func textFieldShouldReturn(nameField: UITextField) -> Bool {
+        print("should---->return")
+        //textField code
+        
+        
+        displayLyrics(sender: nameField)
+        return true
     }
 
     
