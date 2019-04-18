@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
        
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -33,6 +35,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func displayLyrics(sender: AnyObject) {
+        print("hereee")
+        
+        if nameField.text != nil {
+            lyricsView.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
+        }
         
     }
     
