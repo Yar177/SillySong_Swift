@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-     @IBOutlet weak var nameField: UITextField!
-    
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var lyricsView: UITextView!
     
+    
+    let bananaFanaTemplate = [
+        "<FULL_NAME>, <FULL_NAME>, Bo B<SHORT_NAME>",
+        "Banana Fana Fo F<SHORT_NAME>",
+        "Me My Mo M<SHORT_NAME>",
+        "<FULL_NAME>"].joined(separator: "\n")
+
 
     override func viewDidLoad() {
        
@@ -34,12 +40,20 @@ class ViewController: UIViewController {
         var shortName = name.lowercased()
         shortName.remove(at: shortName.startIndex)
         
-        //    let vowelSet = CharacterSet(charactersIn: "aeiou")
-        
-        
         return shortName
     }
     
+    
+    func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
+        let shortName = shourtName(name: fullName)
+        
+        let lyrics = lyricsTemplate
+            .replacingOccurrences(of: "<FULL_NAME>", with: fullName)
+            .replacingOccurrences(of: "<SHORT_NAME>", with: shortName)
+        
+        return lyrics
+    }
+
     
     
 
