@@ -63,13 +63,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func textFieldShouldReturn(nameField: UITextField) -> Bool {
-        print("should---->return")
-        //textField code
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        
-        displayLyrics(sender: nameField)
-        return true
+        print("---->")
+        self.view.endEditing(true)
+        return false
     }
 
     
