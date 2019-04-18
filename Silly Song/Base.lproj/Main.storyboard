@@ -44,6 +44,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyricsWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lwk-M5-GIi"/>
+                                    <action selector="resetWithSender:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="yg6-DT-3Jw"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75593560290134065" green="1" blue="0.97430882075299541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

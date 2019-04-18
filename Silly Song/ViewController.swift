@@ -22,9 +22,22 @@ class ViewController: UIViewController {
     
     
     @IBAction func reset(sender: AnyObject) {
+        nameField.text = ""
+     //   nameField.placeholder = " Enter Your Name!"
     }
     
     @IBAction func displayLyrics(sender: AnyObject) {
+        
+    }
+    
+    func shourtName(name: String) -> String{
+        var shortName = name.lowercased()
+        shortName.remove(at: shortName.startIndex)
+        
+        //    let vowelSet = CharacterSet(charactersIn: "aeiou")
+        
+        
+        return shortName
     }
     
     
